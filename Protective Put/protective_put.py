@@ -33,7 +33,7 @@ def protective_put(S, strike, premium ,PP):
     st_payoff=stock_payoff(S,PP)  # calls and stores stock payoff in a variable
     put_pro=put_profit(S, strike, premium)  # calls and stores put profit in a variable
     protput_profit = put_pro+st_payoff
-    # Plot the short put graph
+    # Plot the protective put graph
     fig, ax = plt.subplots()
     ax.spines['bottom'].set_position('zero')
     ax.plot(S,st_payoff,'--',label='Stock Payoff',color='g')
@@ -53,7 +53,7 @@ PP=55
 strike = 55 
 premium = 4.5
 
-#Generating the profit profile on long position on the put option
+#Generating the profit profile on protective put position
 protective_put(S,strike, premium,PP)
 
 
